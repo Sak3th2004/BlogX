@@ -11,7 +11,7 @@ const LoadDB = async () => {
 LoadDB();
 
 
-// API Endpoint to get all blogs
+
 export async function GET(request) {
 
   const blogId = request.nextUrl.searchParams.get("id");
@@ -26,7 +26,7 @@ export async function GET(request) {
 }
 
 
-// API Endpoint For Uploading Blogs
+
 export async function POST(request) {
 
   const formData = await request.formData();
@@ -54,7 +54,7 @@ export async function POST(request) {
   return NextResponse.json({ success: true, msg: "Blog Added" })
 }
 
-// Creating API Endpoint to delete Blog
+
 
 export async function DELETE(request) {
   const id = await request.nextUrl.searchParams.get('id');
